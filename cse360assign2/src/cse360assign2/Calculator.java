@@ -14,10 +14,11 @@ package cse360assign2;
 /**
  * Creating the calculator class
  */
+
 public class Calculator {
 	
 	private int total;
-	private String history = "";
+	private String history = " ";
 	
 	public Calculator ()
 	{
@@ -98,8 +99,9 @@ public class Calculator {
  * This method will print the history of all
  * actions as a string
  */
-	public String getHistory () {
-		return " ";
-	}
+	public void getHistory ()
+	{
+		System.out.println(history);
+	}	
 }
 
