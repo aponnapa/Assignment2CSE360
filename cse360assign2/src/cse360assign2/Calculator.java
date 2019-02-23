@@ -15,53 +15,91 @@ package cse360assign2;
  * Creating the calculator class
  */
 public class Calculator {
-
+	
 	private int total;
+	private String history = "";
 	
-	public Calculator () {
+	public Calculator ()
+	{
 		total = 0;  
+		history = history + Integer.toString(total);
 	}
 	
-	public int getTotal () {
-		return 0;
+	public int getTotal ()
+	{
+		return total;
 	}
+	
 /**
  * This method will add value to total
  * @param value
  */
-	public void add (int value) {
-		
+	
+	public void add (int value)
+	{
+		total = total + value;
+		String addit = Integer.toString(value);
+		history = history + " + ";
+		history = history + addit;
+
 	}
 	
 /**
  * This method will subtract value from total
  * @param value
  */
-	public void subtract (int value) {
-		
+	
+	public void subtract (int value)
+	{
+		total = total - value;
+		String addit = Integer.toString(value);
+		history = history + " - ";
+		history = history + addit;
+
 	}
+	
 /**
  * This method will multiply value and total	
  * @param value
  */
-	public void multiply (int value) {
-		
+	
+	public void multiply (int value)
+	{
+		total = total * value;
+		String addit = Integer.toString(value);
+		history = history + " * ";
+		history = history + addit;
+
 	}
+	
 /**
  * This method will divide total by value
  * @param value
  */
-	public void divide (int value) {
+	
+	public void divide (int value)
+	{
+		if(value == 0) 
+		{
+			total = 0;
+		} 
+		else 
+		{
+			total = total / value;
+		}
 		
+		String addit = Integer.toString(value);
+		history = history + " / ";
+		history = history + addit;
+
 	}
 
 /**
- * This method will return the history of all
+ * This method will print the history of all
  * actions as a string
- * @return
  */
 	public String getHistory () {
-		return "";
+		return " ";
 	}
 }
 
